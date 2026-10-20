@@ -1,1 +1,21 @@
-# Welcome to the about section
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Republica Yirtrudina</title>
+    <!-- Link to external CSS styling sheets goes here -->
+    <link rel="stylesheet" href="styleyirt.css">
+</head>
+<body>
+
+    <h1>Welcome to Republica Yirtrudina</h1>
+
+    <h2>About Republica Yirtrudina</h2>
+    
+    <p>Republica Yirtrudina is a fictional country in the Minecraft server known as CivMC.</p>
+    <p>Also known as Yirtrudis, Yirtrudina is a socialist republic in the (+,-) quadrantthat thrives on tourism and trade.</p>
+    <p>We value social equality, community, and scalable development.</p>
+
+</body>
+</html>

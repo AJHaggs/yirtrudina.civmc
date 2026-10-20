@@ -1,1 +1,24 @@
-# This is where you'll be able to see maps of Yirtrudina, including Shops, Plots, and points of interest
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps of Republica Yirtrudina</title>
+    <!-- Link to external CSS styling sheets goes here -->
+    <link rel="stylesheet" href="styleyirt.css">
+</head>
+<body>
+
+    <h1>Yirtrudina Maps</h1>
+    
+    <h2>Railways</h2>
+    <p>Railway maps here</p>
+
+    <h2>Shops</h2>
+    <p>Shop locations and stock here</p>
+
+    <h2>Points of Interest</h2>
+    <p>Interesting places to visit here</p>
+
+</body>
+</html>
