@@ -1,10 +1,18 @@
 h1 {
   color: rgb(93, 93, 223);
-  font-size: 32px;
+  font-size: 38px;
 }
 h2 {
   color: rgb(93, 93, 223);
-  font-size: 28px;
+  font-size: 30px;
+}
+h3 {
+  color: rgb(93, 93, 223);
+  font-size: 26px;
+}
+h4 {
+  color: rgb(93, 93, 223);
+  font-size: 22px;
 }
 p {
   color: whitesmoke;
@@ -28,5 +36,15 @@ a:link {
   color: yellow;
   font-style: italic;
   font-size: 18px;
-  margin-top: 25px
+  margin-top: 30px;
+}
+li {
+  color: whitesmoke;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.gov-name {
+  color: whitesmoke;
+  font-size: 20px;
+  margin-left: 20px;
 }
