@@ -5,6 +5,6 @@ I am a mess of a person trying to figure out how Github and VS Code work.
 
 [Open Website](https://ajhaggs.github.io/yirtrudina.civmc)
 
-Layout made by Preston Espinosa, [Dapetonputer Technologies](https://github.com/dapetonman)  
+Layout made by Preston Espinosa, [dapetonputer technologies](https://github.com/dapetonman)  
 Idea and nation by SquigglyGlobe  
 Initial execution by yours truly, [AJHaggs](https://github.com/AJHaggs)
