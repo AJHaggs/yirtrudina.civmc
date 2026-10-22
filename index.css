@@ -1,50 +1,259 @@
+@import url('https://googleapis.com');
+
+/* reset default browser spacing cuz like yeah */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(20, 20, 20);
+  font-family: 'Verdana', sans-serif;
+}
+
 h1 {
   color: rgb(93, 93, 223);
   font-size: 38px;
+  font-family: 'Tinos', sans-serif;
+  margin-bottom: 30px;
+  width: fit-content;
+  
 }
+
 h2 {
   color: rgb(93, 93, 223);
-  font-size: 30px;
+  font-size: 24px;
+  font-family: 'Tinos', sans-serif;
+  margin-bottom: 20px;
+  width: fit-content;
+  border-bottom: 1px solid #333;
+
 }
+
 h3 {
   color: rgb(93, 93, 223);
   font-size: 26px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #333;
 }
+
 h4 {
   color: rgb(93, 93, 223);
   font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
+
 p {
   color: whitesmoke;
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Verdana', sans-serif;
+  margin-bottom: 15px;
 }
-body {
-  background-color: rgb(20, 20, 20);
-}
-a:visited {
+
+a:visited, a:link {
   color: yellow;
   font-style: italic;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Tinos', sans-serif;
+  text-decoration: none;
 }
-a:link {
-  color: yellow;
-  font-style: italic;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+li {
+  color: whitesmoke;
+  font-size: 16px;
+  font-family: 'Tinos', sans-serif;
 }
+
 .homepage-link {
   color: yellow;
   font-style: italic;
   font-size: 18px;
-  line-height: 2;
+  margin-top: 30px;
 }
-li {
-  color: whitesmoke;
-  font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+
 .gov-name {
   color: whitesmoke;
   font-size: 20px;
   margin-left: 20px;
+}
+
+/* styling for the navigation bar starts here */
+/* flex container wraps both sidebar and main content idk */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* sidebar styling */
+.sidebar {
+  width: 280px;
+  background-color: #1a1a2e;
+  padding: 20px;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar h2 {
+  font-size: 2.5rem;
+  color: rgb(93, 93, 223);
+}
+
+.sidebar h3 {
+  font-size: 1.5rem;
+  color: rgb(93, 93, 223);
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: yellow;
+  font-style: italic;
+  font-family: 'Tinos', sans-serif;
+  font-size: 1.1rem;
+  display: block;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #fff;
+}
+
+.sidebar-flag {
+  margin-top: auto;
+}
+
+.sidebar-flag img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+}
+
+/* main content area */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  max-width: 700px;
+}
+
+.main-content img {
+  margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.gov-list {
+  list-style: none;
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.gov-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+/* Label and empty status styling thingy */
+.gov-list .role {
+  font-weight: bold;
+  color: #ddd;
+}
+
+.gov-list .role-user {
+  font-style: italic;
+  color: #aaa;
+}
+
+.gov-list .empty {
+  color: #777; /* none grey */
+  font-style: italic;
+}
+
+/* always keep checkbox toggle hidden */
+#menu-toggle {
+  display: none;
+}
+
+/* hide top bar on desktop */
+.mobile-navbar {
+  display: none;
+}
+
+/* --- mobile view --- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  /* build and style the actual top bar */
+  .mobile-navbar {
+    display: flex;
+    justify-content: space-between; /* country name left and icon right */
+    align-items: center;
+    width: 100%;
+    height: 80px;                   /* fixed height for top bar */
+    background-color: #1a1a2e;       /* same background */
+    padding: 0 24px;
+    border-bottom: 2px solid #333;   /* visible separator line */
+    position: fixed;                /* lock to top of phone screen */
+    top: 0;
+    left: 0;
+    z-index: 999;                   /* keep above everything */
+  }
+
+  .mobile-title {
+    color: rgb(93, 93, 223);
+    font-size: 2.0rem;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    font-family: 'Tinos', sans-serif;
+  }
+
+  .menu-btn {
+    color: yellow;
+    font-size: 2.2rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* position sidebar directly beneath the top bar */
+  .sidebar {
+    display: none;                  /* hidden until clicked */
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 80px;                      /* sits right below the 80px top bar for consist */
+    left: 0;
+    z-index: 998;
+    border-bottom: 2px solid #333;
+  }
+
+  /* hide duplicate main title inside the menu when dropped down */
+  .sidebar h2 {
+    display: none;
+  }
+
+  /* drop down the menu when hamburger is clicked twin */
+  #menu-toggle:checked ~ .sidebar {
+    display: flex;
+  }
+
+  /* push page content down so top bar doesnt cover it (son) */
+  .main-content {
+    margin-top: 80px;
+    padding: 20px;
+  }
 }
